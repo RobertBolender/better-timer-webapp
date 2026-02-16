@@ -58,8 +58,8 @@ self.addEventListener('push', (evt) => {
   const title = data.title || 'Timer Alert';
   const options = {
     body: data.body || 'Your timer has finished!',
-    icon: 'icons/icon-192x192.svg',
-    badge: 'icons/icon-192x192.svg',
+    icon: './icons/icon-192x192.svg',
+    badge: './icons/icon-192x192.svg',
     vibrate: [200, 100, 200],
     tag: 'timer-notification',
     requireInteraction: true
