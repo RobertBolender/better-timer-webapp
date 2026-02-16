@@ -6,6 +6,7 @@ class TimerApplication {
     this.timerIntervalId = null;
     this.audioContext = null;
     this.oscillator = null;
+    this.alarmIntervalId = null;
     this.isRunning = false;
     
     this.initializeElements();
@@ -111,7 +112,7 @@ class TimerApplication {
       gainNode.connect(this.audioContext.destination);
       this.oscillator.start();
       
-      setInterval(() => {
+      this.alarmIntervalId = setInterval(() => {
         if (this.oscillator) {
           this.oscillator.frequency.setValueAtTime(
             this.oscillator.frequency.value === 880 ? 440 : 880,
@@ -125,6 +126,10 @@ class TimerApplication {
   }
 
   stopAlarmSound() {
+    if (this.alarmIntervalId) {
+      clearInterval(this.alarmIntervalId);
+      this.alarmIntervalId = null;
+    }
     if (this.oscillator) {
       this.oscillator.stop();
       this.oscillator = null;
