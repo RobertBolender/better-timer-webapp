@@ -125,6 +125,28 @@ Open the app in a browser and:
 3. Test the drag gesture on the snooze grid
 4. Verify the timer snoozes for 5 minutes
 
+## Deployment
+
+### GitHub Pages Deployment
+This repository is configured to automatically deploy to GitHub Pages when changes are pushed to the `main` branch.
+
+#### Setting up GitHub Pages (One-time setup)
+1. Go to your repository settings on GitHub
+2. Navigate to "Pages" in the left sidebar
+3. Under "Build and deployment":
+   - Source: Select "GitHub Actions"
+4. The workflow will automatically deploy on the next push to `main`
+
+Once deployed, your app will be available at:
+- `https://[username].github.io/better-timer-webapp/` (for project pages)
+- Or your custom domain if configured
+
+The deployment includes:
+- Automatic build and deployment on push to `main`
+- Manual deployment option via GitHub Actions UI
+- Optimized caching for PWA features
+- Support for custom domains
+
 ## License
 MIT
 
