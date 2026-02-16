@@ -1,0 +1,16 @@
+{
+  "name": "better-timer-webapp",
+  "version": "1.0.0",
+  "description": "A PWA timer with advanced snooze controls",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx http-server public -p 8080",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": ["pwa", "timer", "productivity"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
